@@ -1,45 +1,502 @@
-/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&Alegreya&family=Sedgwick+Ave+Display&display=swap');
+
+
+/* ------------------------------------------------------
+RESET
+------------------------------------------------------ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIABLES */
+
+/* ------------------------------------------------------
+VARIABLES
+------------------------------------------------------ */
 :root {
+  /* Colors */
   --white: #fff;
+  --ghost-white: #f4f4f9;
+  --sage: #bcbd8b;
+  --siam: #69724e;
+  --reseda-green: #717744;
+  --drab-dark-brown: #373d20;
+  --brown-bramble: #4e3524;
+  --van-dyke: #564138;
+  --nero: #232323;
+
+  /* Fonts */
+  --serif: 'Alegreya', serif;
+  --serif-two: 'Instrument Serif', serif;
+  --cursive: 'Sedgwick Ave Display', cursive;
 }
 
-/* HEADER */
+
+/* ------------------------------------------------------
+GENERAL
+------------------------------------------------------ */
+body {
+  font-family: var(--cursive);
+  color: var(--white);
+  background-color: var(--ghost-white);
+}
+
+
+/* ------------------------------------------------------
+HEADER
+------------------------------------------------------ */
 header {
-  width: 100%;
-  height: 140px;
-  position: fixed;
+  height: 115px;
+  bottom: 1rem;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #d2d2d2;
+  color: var(--white);
+  position: relative;
   z-index: 1;
 }
 
 header img {
-    width: 100px;
+  width: 3rem;
 }
 
 header p {
-    width: 150px;
-    height: 70%;
-    display: flex;
-    align-items: flex-end;
-    font-family: sans-serif;
-    font-size: 1.6rem;
-    font-weight: 900;
-    text-align: center;
+  width: 114px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  text-align: center;
+  position: sticky;
+  bottom: 1rem;
+  align-self: flex-end;
 }
 
-/* MAIN */
 
-/* FOOTER */
+/* ------------------------------------------------------
+MAIN
+------------------------------------------------------ */
+main {
+  width: 100%;
 
-/* MEDIA QUERIES */
+  font-family: var(--serif);
+  font-weight: 900;
+  position: absolute;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 11px;
+}
+
+main div video {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-height: 610px;
+  position: relative;
+  top: -115px;
+}
+
+#barbecue-cuts {
+  width: 300px;
+  height: 271px;
+  background-color: rgba(86, 65, 56, 0.8);
+  position: relative;
+  top: -164px;
+  padding: 8px 30px 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#barbecue-cuts p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#opening-hours {
+  width: 300px;
+  height: 150px;
+  background-color: rgba(105, 114, 78, 0.8);
+  position: relative;
+  top: -444px;
+  padding: 0 20px 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#opening-hours p {
+  font-size: 1.2em;
+}
+
+#opening-hours h2 {
+  font-size: 2rem;
+}
+
+main > section > img {
+  width: 100%;
+  max-height: 700px;
+  position: relative;
+  top: -395px;
+}
+
+#top-section {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#who-we-are #paragraphs {
+  column-count: 2;
+  column-width: 300px;
+  column-gap: 60px;
+}
+
+#noble-meats div,
+#exotic-meats div{
+  width: 100%;
+  max-width: 930px;
+  gap: 20px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#noble-meats h2 {
+  position: relative;
+  top: -410px;
+}
+
+#noble-meats div {
+  top: -400px;
+}
+
+#exotic-meats h2 {
+  position: relative;
+  top: -360px;
+}
+
+#exotic-meats div {
+  top: -350px;
+}
+
+#noble-meats h2,
+#exotic-meats h2 {
+  margin-bottom: 15px;
+  font-family: var(--serif);
+  text-align: center;
+  font-size: 2.5em;
+  color: var(--nero);
+}
+
+#noble-meats img,
+#exotic-meats img {
+  width: 18.75em;
+  height: 370px;
+}
+
+#noble-meats figure,
+#exotic-meats figure {
+  position: relative;
+}
+
+figcaption {
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  color: var(--white);
+}
+
+#who-we-are {
+  width: 100%;
+  padding: 20px 20px 20px 40px;
+  margin-top: 40px;
+
+  position: relative;
+  top: -320px;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.6em;
+  text-align: justify;
+  background-color: var(--reseda-green);
+}
+
+#who-we-are h2 {
+  margin-bottom: 15px;
+  font-size: 2.4em;
+  font-weight: 300;
+  color: var(--white);
+  font-family: var(--cursive);
+}
+
+#who-we-are p:first-child::first-letter {
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+#who-we-are p {
+  margin: 3px 0;
+  text-indent: 30px;
+}
+
+#who-we-are ul {
+  margin: 10px 0;
+}
+
+#our-space {
+  position: relative;
+  top: -270px;
+}
+
+#our-space img {
+  width: 100%;
+  max-height: 690px;
+}
+
+#our-space h2 {
+  margin-bottom: 15px;
+  font-family: var(--serif-two);
+  color: var(--brown-bramble);
+  text-align: center;
+  font-size: 2.5em;
+}
+
+#location h2 {
+  margin-bottom: 15px;
+  font-family: var(--serif-two);
+  text-align: center;
+  font-size: 2.5em;
+  color: var(--nero);
+}
+
+#location {
+  width: 100%;
+  position: relative;
+  top: -220px;
+}
+
+#location iframe {
+  border: none;
+  width: 100%;
+  height: 450px;
+}
+
+
+/* ------------------------------------------------------
+FOOTER
+------------------------------------------------------ */
+footer {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  font-weight: 300;
+  font-family: var(--serif);
+  position: relative;
+  top: 6357px;
+  width: 100%;
+  height: 260px;
+  background-color: var(--reseda-green);
+}
+
+footer div {
+  margin-right: 30px;
+}
+
+
+/* ------------------------------------------------------
+MEDIA QUERIES
+------------------------------------------------------ */
+@media (min-width: 350px) {
+  footer {
+    top: 6280px;
+  }
+}
+
+@media (min-width: 410px) {
+  header {
+    top: 10px;
+  }
+  
+  header p {
+    font-size: 2.2em;
+  }
+  
+  header img {
+    width: 4.5rem;
+  }
+  
+  #noble-meats img,
+  #exotic-meats img {
+    width: 370px;
+  }
+
+  footer {
+    height: 200px;
+  }
+}
+
+@media (min-width: 450px) {
+  footer {
+    top: 6292px;
+  }
+}
+
+@media (min-width: 490px) {
+  footer {
+    top: 6320px;
+  }
+}
+
+@media (min-width: 520px) {
+  footer {
+    top: 6230px;
+  }
+
+  main > section > img {
+    width: 90%;
+    top: -390px;
+  }
+}
+
+@media (min-width: 590px) {
+  footer {
+    top: 6200px;
+  }
+}
+
+@media (min-width: 690px) {
+  footer {
+    top: 6250px;
+  }
+
+  header {
+    top: 20px;
+  }
+
+  header p {
+    font-size: 2.5em;
+  }
+
+  header img {
+    width: 5rem;
+  }
+}
+
+@media (min-width: 725px) {
+  footer {
+    top: 6270px;
+  }
+}
+
+@media (min-width: 774px) {
+  footer {
+    top: 6260px;
+  }
+}
+
+@media (min-width: 775px) {
+  footer {
+    top: 4700px;
+  }
+}
+
+@media (min-width: 790px) {
+  footer {
+    top: 4730px;
+  } 
+}
+
+@media (min-width: 845px) {
+  footer {
+    top: 4780px;
+  }
+}
+
+@media (min-width: 889px) {
+  #paragraphs {
+    font-size: 1.1em;
+  }
+
+  footer {
+    top: 4820px;
+  }
+}
+
+@media (min-width: 910px) {
+  header {
+    top: 40px;
+  }
+
+  header p {
+    font-size: 3.5em;
+  }
+
+  header img {
+    width: 7rem;
+  }
+
+  #noble-meats img,
+  #exotic-meats img {
+    width: 400px;
+  }
+
+  footer {
+    top: 4850px;
+  }
+}
+
+@media (min-width: 958px) {
+  footer {
+    top: 4880px;
+  }
+}
+
+@media (min-width: 982px) {
+  footer {
+    top: 4920px;
+  }
+}
+
+@media (min-width: 1037px) {
+  footer {
+    top: 4940px;
+  }
+}
+
+@media (min-width: 1050px) {
+  footer {
+    top: 4860px;
+  }
+
+  #our-space img {
+    width: 98.5vw;
+    max-height: 680px;
+  }
+}
