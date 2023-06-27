@@ -193,6 +193,41 @@
         </div>
         <!-- Carne Nuestra. Sabor que não se mede. Degustação ao próximo nível. -->
       </section>
+
+      <form 
+          method="post"
+      >
+        <h2>Cadastre-se</h2>
+      
+        <div id="formContainer">
+          <fieldset id="general">
+            <span class="errorMessage" hidden></span>
+            <label for="name">Nome</label>
+            <input id="name" type="text" name="name" placeholder="Seu nome completo">
+  
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" placeholder="Seu melhor e-mail">
+  
+            <label for="phone">Celular</label>
+            <input id="phone" type="text" name="phone" placeholder="Seu melhor número">
+          </fieldset>
+          
+          <fieldset id="radio-button">
+            <label>Preferências</label>
+          </fieldset>
+  
+          <fieldset id="select">
+            <label for="favoriteMeat">Tipo de Carne Favorita</label>
+          </fieldset>
+  
+          <fieldset id="checkbox">
+            <label>Receber Comunicações Por</label>
+          </fieldset>
+        </div>
+        
+        <input type="button" value="Enviar">
+      </form>
+
       <div id="our-space">
         <h2>Nosso Espaço</h2>
         <img
@@ -225,5 +260,7 @@
         27520-261
       </address>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
