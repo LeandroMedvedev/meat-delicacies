@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&Alegreya&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&Alegreya&family=Genos:wght@500&family=Sedgwick+Ave+Display&display=swap');
 
 
 /* ------------------------------------------------------
@@ -16,19 +16,23 @@ VARIABLES
 ------------------------------------------------------ */
 :root {
   /* Colors */
-  --white: #fff;
-  --ghost-white: #f4f4f9;
-  --sage: #bcbd8b;
-  --siam: #69724e;
+  --white: #FFF;
+  --ghost-white: #F4F4F9;
+  --drab-dark-brown: #373D20;
   --reseda-green: #717744;
-  --drab-dark-brown: #373d20;
-  --brown-bramble: #4e3524;
+  --sage: #BCBD8B;
+  --siam: #69724E;
   --van-dyke: #564138;
+  --brown-bramble: #4E3524;
+  --nero-two: #292929;
   --nero: #232323;
+  --can-can: #D7898D;
+  --red: #F00;
 
   /* Fonts */
   --serif: 'Alegreya', serif;
   --serif-two: 'Instrument Serif', serif;
+  --sans-serif: 'Genos', sans-serif;
   --cursive: 'Sedgwick Ave Display', cursive;
 }
 
@@ -39,7 +43,7 @@ GENERAL
 body {
   font-family: var(--cursive);
   color: var(--white);
-  background-color: var(--ghost-white);
+  background-color: var(--nero-two);
 }
 
 
@@ -81,7 +85,6 @@ MAIN
 ------------------------------------------------------ */
 main {
   width: 100%;
-
   font-family: var(--serif);
   font-weight: 900;
   position: absolute;
@@ -170,7 +173,7 @@ main > section > img {
 #noble-meats div,
 #exotic-meats div{
   width: 100%;
-  max-width: 930px;
+  max-width: 1020px;
   gap: 20px;
   position: relative;
   display: flex;
@@ -203,7 +206,7 @@ main > section > img {
   font-family: var(--serif);
   text-align: center;
   font-size: 2.5em;
-  color: var(--nero);
+  color: var(--white);
 }
 
 #noble-meats img,
@@ -230,28 +233,24 @@ figcaption {
   width: 100%;
   padding: 20px 20px 20px 40px;
   margin-top: 40px;
-
   position: relative;
   top: -320px;
-
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.6em;
   text-align: justify;
-  background-color: var(--reseda-green);
+  background-color: var(--white);
+  color: var(--nero);
 }
 
 #who-we-are h2 {
   margin-bottom: 15px;
-  font-size: 2.4em;
-  font-weight: 300;
-  color: var(--white);
-  font-family: var(--cursive);
+  font-size: 2.2em;
+  color: var(--nero);
 }
 
 #who-we-are p:first-child::first-letter {
@@ -268,9 +267,233 @@ figcaption {
   margin: 10px 0;
 }
 
+/* ------------------------------------------------------
+FORM
+------------------------------------------------------ */
+form {
+  width: 94%;
+  max-width: 453px;
+  font-family: var(--sans-serif);
+  font-weight: 400;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dotted rgba(105, 114, 78, 0.8);
+  color: rgba(105, 114, 78, 0.8);
+  border-radius: 3px;
+  position: relative;
+  top: -240px;
+}
+
+div#formContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset {
+  width: 100%;
+  margin-bottom: 30px;
+  border: none;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  max-width: 450px;
+}
+
+form > h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2.3em;
+}
+
+label {
+  width: 90%;
+  padding-left: 3px;
+  text-align: left;
+  color: var(--white);
+}
+
+input#name,
+input#email,
+input#phone {
+  width: 95%;
+  height: 50px;
+  padding: 7px;
+  font-size: 0.8em;
+  font-family: var(--sans-serif);
+  letter-spacing: 2px;
+  outline-color: var(--nero);
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=button] {
+  width: 95%;
+  max-width: 350px;
+  height: 60px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  border-radius: 6px;
+  letter-spacing: 2px;
+  font-family: var(--sans-serif);
+  cursor: pointer;
+  transition: width 0.4s ease;
+  box-shadow: 0 0 5px 3px rgba(105, 114, 78, 0.8);
+  background-color: rgba(105, 114, 78, 0.8);
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.invalidNameMessage {
+  width: 85%;
+  max-width: 260px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--red);
+  border: 1px solid var(--red);
+  background-color: var(--white);
+  border-radius: 4px;
+  position: absolute;
+  bottom: 733px;
+}
+
+.invalidEmailMessage {
+  width: 97%;
+  max-width: 279px;
+  padding: 3px 12px;
+  font-size: 16px;
+  color: var(--red);
+  border: 1px solid var(--red);
+  background-color: var(--white);
+  border-radius: 4px;
+  position: absolute;
+  bottom: 513px;
+}
+
+.invalidEmailMessage span {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+}
+
+.invalidEmailMessage li {
+  list-style-type: none;
+}
+
+.invalidPhoneMessage {
+  width: 85%;
+  max-width: 279px;
+  font-size: 16px;
+  text-align: center;
+  color: var(--red);
+  border: 1px solid var(--red);
+  background-color: var(--white);
+  border-radius: 4px;
+  position: absolute;
+  bottom: 556px;
+}
+
+fieldset#radio-button > div,
+fieldset#checkbox > div {
+  width: 80%;
+  line-height: 24px;
+}
+
+fieldset#select > div#favoriteMeat {
+  width: 80%;
+}
+
+fieldset#select div.listDropDown {
+  width: 196px;
+  padding-right: 8px;
+  line-height: 24px;
+  text-align: right;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  color: var(--nero-two);
+}
+
+span#exotic,
+span#traditional,
+span#both {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  cursor: pointer;
+}
+
+div.listDropDown span:hover {
+  background-color: rgba(41, 41, 41, 0.2);
+  transition: .3s;
+}
+
+span#exotic.check,
+span#traditional.check,
+span#both.check {
+  background-color: var(--can-can);
+}
+
+span#allMeans.check,
+span#eMail.check,
+span#sms.check {
+  background-color: var(--can-can);
+}
+
+span#allMeans,
+span#eMail,
+span#sms {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+fieldset#select {
+  position: relative;
+}
+
+svg#arrow {
+  width: 24px;
+  height: 24px;
+  background-color: var(--drab-dark-brown);
+  position: absolute;
+  cursor: pointer;
+}
+
+svg#arrow > p {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+svg#arrow i.arrow {
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 6px;
+}
+
+svg#arrow i.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+svg#arrow i.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
 #our-space {
   position: relative;
-  top: -270px;
+  top: -180px;
 }
 
 #our-space img {
@@ -281,7 +504,7 @@ figcaption {
 #our-space h2 {
   margin-bottom: 15px;
   font-family: var(--serif-two);
-  color: var(--brown-bramble);
+  color: var(--white);
   text-align: center;
   font-size: 2.5em;
 }
@@ -291,13 +514,13 @@ figcaption {
   font-family: var(--serif-two);
   text-align: center;
   font-size: 2.5em;
-  color: var(--nero);
+  color: var(--white);
 }
 
 #location {
   width: 100%;
   position: relative;
-  top: -220px;
+  top: -120px;
 }
 
 #location iframe {
@@ -319,10 +542,10 @@ footer {
   font-weight: 300;
   font-family: var(--serif);
   position: relative;
-  top: 6357px;
+  top: 7450px;
   width: 100%;
   height: 260px;
-  background-color: var(--reseda-green);
+  border-top  : 1px solid rgba(105, 114, 78, 0.8);
 }
 
 footer div {
@@ -333,9 +556,35 @@ footer div {
 /* ------------------------------------------------------
 MEDIA QUERIES
 ------------------------------------------------------ */
-@media (min-width: 350px) {
+@media (min-width: 324px) {
+  .invalidEmailMessage {
+    bottom: 532px;
+  }
+}
+
+@media (min-width: 330px) {
   footer {
-    top: 6280px;
+    top: 7380px;
+  }
+}
+
+@media (min-width: 340px) {
+  .invalidNameMessage {
+    bottom: 704px;
+  }
+
+  .invalidEmailMessage {
+    bottom: 502px;
+  }
+
+  .invalidPhoneMessage {
+    bottom: 528px;
+  }
+}
+
+@media (min-width: 349px) {
+  footer {
+    top: 7280px;
   }
 }
 
@@ -362,21 +611,21 @@ MEDIA QUERIES
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 430px) {
   footer {
-    top: 6292px;
+    top: 7300px;
   }
 }
 
-@media (min-width: 490px) {
+@media (min-width: 470px) {
   footer {
-    top: 6320px;
+    top: 7350px;
   }
 }
 
-@media (min-width: 520px) {
+@media (min-width: 518px) {
   footer {
-    top: 6230px;
+    top: 7260px;
   }
 
   main > section > img {
@@ -385,15 +634,15 @@ MEDIA QUERIES
   }
 }
 
-@media (min-width: 590px) {
+@media (min-width: 588px) {
   footer {
-    top: 6200px;
+    top: 7200px;
   }
 }
 
-@media (min-width: 690px) {
+@media (min-width: 688px) {
   footer {
-    top: 6250px;
+    top: 7235px;
   }
 
   header {
@@ -409,33 +658,62 @@ MEDIA QUERIES
   }
 }
 
-@media (min-width: 725px) {
+@media (min-width: 708px) {
   footer {
-    top: 6270px;
+    top: 7270px;
   }
 }
 
-@media (min-width: 774px) {
+@media (min-width: 772px) {
   footer {
-    top: 6260px;
+    top: 7304px;
   }
 }
 
 @media (min-width: 775px) {
+  form {
+    padding: 12px;
+    width: 94%;
+  }
+
+  .invalidNameMessage {
+    bottom: 716px;
+  }
+
+  .invalidEmailMessage {
+    bottom: 514px;
+  }
+
+  .invalidPhoneMessage {
+    bottom: 539px;
+  }
+
   footer {
-    top: 4700px;
+    top: 5740px;
   }
 }
 
-@media (min-width: 790px) {
+@media (min-width: 802px) {
   footer {
-    top: 4730px;
+    top: 5750px;
+  }
+}
+
+@media (min-width: 830px) {
+  footer {
+    top: 5770px;
   } 
 }
 
-@media (min-width: 845px) {
+@media (min-width: 840px) {
   footer {
-    top: 4780px;
+    top: 5790px;
+  }
+}
+
+@media (min-width: 880px) {
+  footer {
+    top: 5820px;
   }
 }
 
@@ -445,7 +723,7 @@ MEDIA QUERIES
   }
 
   footer {
-    top: 4820px;
+    top: 5850px;
   }
 }
 
@@ -464,35 +742,57 @@ MEDIA QUERIES
 
   #noble-meats img,
   #exotic-meats img {
-    width: 400px;
+    width: 498px;
   }
 
   footer {
-    top: 4850px;
-  }
-}
-
-@media (min-width: 958px) {
-  footer {
-    top: 4880px;
+    top: 7446px;
   }
 }
 
-@media (min-width: 982px) {
+@media (min-width: 940px) {
   footer {
-    top: 4920px;
+    top: 7470px;
   }
 }
 
-@media (min-width: 1037px) {
+@media (min-width: 970px) {
   footer {
-    top: 4940px;
+    top: 7500px;
+  }
+}
+
+@media (min-width: 990px) {
+  footer {
+    top: 7530px;
+  }
+}
+
+@media (min-width: 1031px) {
+  form {
+    max-width: 950px;
+  }
+
+  .invalidNameMessage {
+    bottom: 454px;
+  }
+
+  .invalidEmailMessage {
+    bottom: 253px;
+  }
+
+  .invalidPhoneMessage {
+    bottom: 277px;
+  }
+
+  footer {
+    top: 5710px;
   }
 }
 
 @media (min-width: 1050px) {
   footer {
-    top: 4860px;
+    top: 5640px;
   }
 
   #our-space img {
