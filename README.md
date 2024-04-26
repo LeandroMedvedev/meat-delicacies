@@ -19,4 +19,4 @@ Utilizado para manipulação interativa da página, incluindo manipulação de e
 
 *Validador W3C de HTML e CSS com zero erro e advertência.  
 
-Feito com 💞 em março de 2023. 👋🏼🙇🏽  
+Feito com 💞 em junho de 2023. 👋🏼🙇🏽  
