@@ -1,10 +1,10 @@
-# carne-nuestra ☰
+# carne-nuestra :cut_of_meat:
 
 ## ➳ URL  
 https://carne-nuestra.vercel.app/  
 
 ### ⇉ Resumo
-Página de uma churrascaria 🍖 para o projeto final do 1° semestre do curso de Engenharia de Software pelo Instituto Infnet.    
+Página de uma churrascaria para o projeto final do 1° semestre do curso de Engenharia de Software pelo Instituto Infnet.    
 
 ### ⇉ Tecnologias  
  
